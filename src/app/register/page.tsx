@@ -27,7 +27,7 @@ export default function Register() {
             console.log(error);
         }
         revalidateTag("users")
-        redirect("/api/auth/signin")
+        redirect("/")
     }
     return (
        // create register page with form using data in User at models folder and send data to backend server the UI use tailwindcss  and make like NextAuth login page if the user email is exist in database the user will be redirected to login page
