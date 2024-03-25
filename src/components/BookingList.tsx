@@ -1,41 +1,39 @@
-"use client"
-import deleteBooking from "@/libs/deleteBooking"
-import { removeBooking } from "@/redux/features/bookSlice"
-import { useAppSelector } from "@/redux/store"
-import { AppDispatch } from "@/redux/store"
-import { useDispatch } from "react-redux"
-
-export default function BookingList () {
-    const bookItems =  useAppSelector((state)=> state.bookSlice.bookItems)
-    const dispatch =  useDispatch<AppDispatch>()
+'use client'
+import InteractiveCard from './InteractiveCard';
+import Image from 'next/image'
+import { Rating} from '@mui/material';
+import { useState } from 'react';
 
 
-    if(bookItems.length === 0){
-        return (<div className="text-5xl text-center h-fit mt-[20%]"> No Reservation </div>)
-    }
+export default function Card({ hospitalName,imgSrc,onCompare}:{hospitalName:string,imgSrc:string,onCompare?:Function}){
+    
+    const [rating, setRating] = useState<number>(5);
 
-
-
-
-    return (
-        <>
-        {
-            bookItems.map((bookingItem)=> (
-                <div className="bg-slate-200 rounded px-5 mx-5 py-2 my-2" key={bookingItem.id}>
-                    <div className="text-xl">Name: {bookingItem.name}</div>
-                    <div className="text-xl">Surname: {bookingItem.surname}</div>
-                    <div className="text-xl">Id: {bookingItem.id}</div>
-                    <div className="text-xl">Hotel: {bookingItem.hospital}</div>
-                    <div className="text-xl">roomtype: {bookingItem.roomtype}</div>
-                    <div className="text-xl">Date: {bookingItem.bookDate}</div>
-                    
-                    <button className="block rounded-md bg-sky-600 hover:bg-indigo-600 px-3 py-1
-                    text-white shadow-sm" onClick={()=>dispatch(removeBooking(bookingItem.id))}>
-                        Remove from List
-                    </button>
-                </div>
-            ))
-        }
-        </>
-    )
+    return(
+    <InteractiveCard>
+            <div className='w-full h-[70%] relative rounded-t-lg'>
+            <Image src={imgSrc}
+            alt='Hospital Picture'
+            fill={true}
+            className='object-cover rounded-t-lg'
+            />
+            </div>
+            <div className='w-full h-[20%] p-[10px]'>{hospitalName}</div>
+            {
+                onCompare? <Rating 
+                value={rating}
+                name={hospitalName + " Rating"}
+                id={hospitalName + " Rating"}
+                data-testid={hospitalName + " Rating"}
+                onChange={(event, value) => {
+                    event.stopPropagation();
+                    event.preventDefault();
+                    setRating(value || 0); 
+                    onCompare(hospitalName, value); 
+                }
+                }
+                /> : ''
+            }
+    </InteractiveCard>
+    );
 }

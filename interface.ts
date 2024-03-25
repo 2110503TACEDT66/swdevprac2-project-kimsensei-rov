@@ -1,3 +1,5 @@
+import dayjs, { Dayjs } from "dayjs"
+
 export interface HospitalItem {
     _id: string,
     name: string,
@@ -19,10 +21,9 @@ export interface HospitalItem {
   }
 
   export interface BookingItem {
-    name: string,
-    surname: string,
-    id: string,
-    hospital: string,
-    roomtype:string,
-    bookDate: string
+    bookingBegin: Dayjs,
+    bookingEnd: Dayjs,
+    roomType: string,
+    user: string,
+    hotel: string,
   }
