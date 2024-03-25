@@ -5,6 +5,8 @@ import TopMenu from '@/components/TopMenu'
 import { getServerSession } from "next-auth";
 import { authOptions } from "./api/auth/[...nextauth]/route";
 import NextAuthProvider from "@/providers/NextAuthProvider";
+import ReduxProvider from '@/redux/ReduxProvider';
+
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
@@ -23,11 +25,13 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <NextAuthProvider session={session}>
-          <TopMenu />
-          {children}
+        <ReduxProvider>
+      <NextAuthProvider session={session}>
+        <TopMenu/>
+        {children}
         </NextAuthProvider>
-      </body>
+        </ReduxProvider>
+        </body>
     </html>
   )
 }
