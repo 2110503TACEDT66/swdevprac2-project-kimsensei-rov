@@ -36,7 +36,7 @@ export default function Banner(){
                 hover:bg-cyan-600 hover:text-white hover:border-transparent'
                 onClick={(e)=>{e.stopPropagation();router.push('/hospital')}}
                 >
-                Make A Reservation
+                Our Hotels
             </button>
         </div>
     );

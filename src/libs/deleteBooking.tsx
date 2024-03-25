@@ -6,7 +6,7 @@ export default async function deleteAppointment(bookingId:string,token:string) {
         }
     })
     if(!response.ok) {
-        throw new Error("Failed to fetch dentists")
+        throw new Error("Failed to fetch bookings")
     }
     const data = await response.json();
 

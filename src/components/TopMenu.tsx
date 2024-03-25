@@ -12,11 +12,11 @@ export default async function TopMenu(){
 
     return (
         <div className={styles.menucontainer}>
-            <TopMenuItem title='Reservation' pageRef='/booking' />
+            <TopMenuItem title='Make a Reservation' pageRef='/booking' />
             <Image src={'/img/logo.png'} className="h-full w-auto "
             alt='logo' width={0} height={0} sizes="100vh"/>
             <div className='flex flex-row absolute left-0 h-full'>
-            <TopMenuItem title='myReservation' pageRef='/mybooking'/>
+            <TopMenuItem title='Reservation' pageRef='/mybooking'/>
             {
                 session? <Link href="/api/auth/signout"><div className='flex items-center h-full px-2
                 text-cyan-600 text-sm'>Sign-Out of {session.user?.name}</div></Link>
