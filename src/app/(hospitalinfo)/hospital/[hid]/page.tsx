@@ -20,7 +20,7 @@ export default async function HospitalDetailPage({params} : {params:{hid:string}
                     className="rounded-lg w-[30%]"/>
                 <div className="text-md mx-5 text-left">{hospitalDetail.data.name}
                 <div className="text-md mx-5">Address: {hospitalDetail.data.address}</div>
-                <div className="text-md mx-5">Tel: {hospitalDetail.data.tel}</div>
+                <div className="text-md mx-5">Tel: {hospitalDetail.data.telephone}</div>
                 </div>
             </div>
         </main>
