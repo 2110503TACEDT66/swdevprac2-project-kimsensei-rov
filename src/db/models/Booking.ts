@@ -8,6 +8,10 @@ const BookingSchema = new mongoose.Schema({
         type: Date,
         required: [true, 'Please add a booking end date']
     },
+    roomType: {
+        type: String,
+        required: [true, 'Please select room type']
+    },
     user: {
         type: mongoose.Schema.ObjectId,
         ref: 'User',
