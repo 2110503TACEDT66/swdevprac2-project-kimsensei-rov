@@ -1,7 +1,7 @@
 import { BookingItem } from "../../interface"
 
 export default async function postBooking(bookingData: BookingItem, token: string) {
-    const response = await fetch(`https://backend-hotel-booking.vercel.app/api/v1/hotel/${bookingData.hotel}/booking`, {
+    const response = await fetch(`https://backend-hotel-booking.vercel.app/api/v1/hotel/${bookingData.hotel}/bookings/`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",

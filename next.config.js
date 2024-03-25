@@ -4,7 +4,7 @@ const nextConfig = {
         domains: ['drive.google.com']
     },
     experimental: {
-        serverActions: true
+        serverActions: true,
     },
     async headers() {
         return [
