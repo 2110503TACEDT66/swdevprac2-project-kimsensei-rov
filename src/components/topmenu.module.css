@@ -1,0 +1,29 @@
+.menucontainer{
+    height: 50px;
+    background-color: white;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 30;
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.logoimg{
+    height: 100%;
+    width: auto;
+}
+
+.itemcontainer{
+    width: 120px;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 10pt;
+    color: gray;
+}
