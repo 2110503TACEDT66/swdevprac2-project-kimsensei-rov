@@ -13,8 +13,10 @@ export default async function TopMenu(){
     return (
         <div className={styles.menucontainer}>
             <TopMenuItem title='Make a Reservation' pageRef='/booking' />
+            <Link href='/'>
             <Image src={'/img/logo.png'} className="h-full w-auto "
             alt='logo' width={0} height={0} sizes="100vh"/>
+            </Link>
             <div className='flex flex-row absolute left-0 h-full'>
             <TopMenuItem title='Reservation' pageRef='/mybooking'/>
             {
