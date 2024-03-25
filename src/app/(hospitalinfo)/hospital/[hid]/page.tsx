@@ -27,6 +27,3 @@ export default async function HospitalDetailPage({params} : {params:{hid:string}
     );
 }
 
-export async function generateStaticParams(){
-    return [{cid:'001'},{cid:'002'},{cid:'003'},{cid:'004'}]
-}
