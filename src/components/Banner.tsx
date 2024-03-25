@@ -22,7 +22,7 @@ export default function Banner(){
             priority
             objectFit='cover'/>
             <div className=" relative top-28 z-20 text-center text-3xl">
-                <h1>Welcone To Kimsensei Hotel</h1>
+                <h1 className={styles.a}>Welcome To Kimsensei Hotel</h1>
                 {/* <h3> Days:Monday and Wednesday</h3> */}
                 {/* <h3> Timing:10AM to 2PM</h3> */}
             </div>

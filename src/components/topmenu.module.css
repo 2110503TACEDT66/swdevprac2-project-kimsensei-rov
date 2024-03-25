@@ -13,6 +13,7 @@
     justify-content: flex-end;
 }
 
+
 .logoimg{
     height: 100%;
     width: auto;
@@ -26,4 +27,8 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 10pt;
     color: gray;
+    transition: transform 0.3s ease;
+}
+.itemcontainer:hover {
+    transform: scale(1.2);
 }

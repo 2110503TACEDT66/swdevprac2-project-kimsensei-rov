@@ -13,7 +13,7 @@ export default async function TopMenu(){
     return (
         <div className={styles.menucontainer}>
             <Link href='/profile'>
-            <Image src={'/img/user.png'} className="h-full w-auto opacity-35 h-12 py-1"
+            <Image src={'/img/user.png'} className="h-full w-auto opacity-35 h-12 py-1 hover:bg-indigo-600"
             alt='logo' width={0} height={0} sizes="100vh"/>
             </Link>
             <TopMenuItem title='Make a Reservation' pageRef='/booking' />
