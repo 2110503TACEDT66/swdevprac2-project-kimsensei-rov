@@ -20,8 +20,8 @@ export default function booking() {
         console.log(bookingBegin, bookingEnd, roomtype, hospital, name)
         if (bookingBegin && bookingEnd && roomtype && hospital && name) {
             const item: BookingItem = {
-                bookingBegin: dayjs(bookingBegin),
-                bookingEnd: dayjs(bookingEnd),
+                bookingBegin: dayjs(bookingBegin).toDate(),
+                bookingEnd: dayjs(bookingEnd).toDate(),
                 roomType: roomtype,
                 user: "65e56e595d19af11f393293e",
                 hotel: "65e2ec5f9fdb24c50e8eb620" 

@@ -21,8 +21,8 @@ export interface HospitalItem {
   }
 
   export interface BookingItem {
-    bookingBegin: Dayjs,
-    bookingEnd: Dayjs,
+    bookingBegin: Date,
+    bookingEnd: Date,
     roomType: string,
     user: string,
     hotel: string,

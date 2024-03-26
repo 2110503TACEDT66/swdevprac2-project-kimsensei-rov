@@ -1,3 +1,4 @@
+"use server"
 import getUserProfile from "@/libs/getUserProfile"
 import { authOptions } from "../api/auth/[...nextauth]/route"
 import postBooking from "@/libs/postBooking"
