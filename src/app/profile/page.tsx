@@ -11,7 +11,7 @@ export default async function profile () {
     var createdAt = new Date(profile.data.createdAt);
 
     return (
-        <main className="bg-state-100 m-5 p-5">
+        <main className="bg-gray-100 m-5 p-5">
             <div className="text-2xl">{profile.data.name}</div>
             <table className="table-auto border-spacing-2"><tbody>
                 <tr><td>Email</td><td className="pl-4">{profile.data.email}</td></tr>
