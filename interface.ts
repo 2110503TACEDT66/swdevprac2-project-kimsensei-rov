@@ -26,6 +26,7 @@ export interface HospitalItem {
     roomType: string,
     user: string,
     hotel: string,
+    
   }
 
   export interface BookingJson {

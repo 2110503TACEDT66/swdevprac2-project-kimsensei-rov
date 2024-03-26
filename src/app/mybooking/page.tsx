@@ -14,8 +14,7 @@ export default async function shops() {
   const books = await getBookings(session.user.token);
 
   return (
-      <main className="p-5 text-center">
-        <div className="bg-white h-[5px] mt-[20px] mb-[20px] w-[80%] sm:w-[60%] md:w-[50%] m-auto rounded-xl"></div>
+      <main >
         <BookingCatalog BookingJson={books}></BookingCatalog>
       </main>
   );
