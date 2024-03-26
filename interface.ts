@@ -21,16 +21,9 @@ export interface HospitalItem {
   }
 
   export interface BookingItem {
-    bookingBegin: string,
-    bookingEnd: string,
+    bookingBegin: Date,
+    bookingEnd: Date,
     roomType: string,
     user: string,
     hotel: string,
-  }
-
-  export interface BookingJson {
-    success: boolean,
-    count: number,
-    pagination: Object,
-    data: BookingItem[]
   }
