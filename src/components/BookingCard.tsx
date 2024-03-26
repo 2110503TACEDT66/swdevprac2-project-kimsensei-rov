@@ -18,7 +18,6 @@ export default function BookingCard({ bookingBegins, bookingEnds, roomTypes, use
                     <div className="text-sm">roomType {roomTypes}</div>
                     <div className="text-md">users: {users} </div>
                     <div className="text-md">hotels: {hotels} </div>
-                    
                 </div>
     );
 }

@@ -54,9 +54,9 @@ export default function DateReserve({ date_begin, date_end, nam, sur, id, hos, r
                 value={hospitId}
                 onChange={(e) => { setHospitalId(e.target.value); hos(e.target.value) }}
             >
-                <MenuItem value="Kimsensei1">Kimsensei1</MenuItem>
-                <MenuItem value="Kimsensei2">Kimsensei2</MenuItem>
-                <MenuItem value="Kimsensei3">Kimsensei3</MenuItem>
+                <MenuItem value="65e6c853023fc52fe87a6ed8">Kimsensei1</MenuItem>
+                <MenuItem value="65e6c94e023fc52fe87a6ee4">Kimsensei2</MenuItem>
+                <MenuItem value="65e2ec5f9fdb24c50e8eb620">Kimsensei3</MenuItem>
             </Select>
             <Select
                 label="Room Type"

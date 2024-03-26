@@ -25,7 +25,7 @@ export default function booking() {
                 bookingEnd: dayjs(bookingEnd).toDate(),
                 roomType: roomtype,
                 user: "65e56e595d19af11f393293e",
-                hotel: "65e2ec5f9fdb24c50e8eb620" 
+                hotel: hospital 
             };
             getHos({ item })
         } else {
