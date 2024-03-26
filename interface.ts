@@ -27,3 +27,10 @@ export interface HospitalItem {
     user: string,
     hotel: string,
   }
+
+  export interface BookingJson {
+    success: boolean,
+    count: number,
+    pagination: Object,
+    data: BookingItem[]
+  }

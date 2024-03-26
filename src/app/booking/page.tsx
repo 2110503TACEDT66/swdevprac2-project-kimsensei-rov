@@ -4,6 +4,7 @@ import dayjs, { Dayjs } from "dayjs";
 import { BookingItem } from "../../../interface";
 import { useState } from "react";
 import getHos from "./post";
+import { getServerSession } from "next-auth";
 export default function booking() {
 
     const [bookingBegin, setbookingBegin] = useState<Dayjs | null>(null)
@@ -13,7 +14,7 @@ export default function booking() {
     const [name, setName] = useState<string | null>(null)
     const [surname, setSurname] = useState<string | null>(null)
     const [id, setId] = useState<string | null>(null)
-
+    
 
     const makeBooking = () => {
         // find _id of hospitals by hospital name

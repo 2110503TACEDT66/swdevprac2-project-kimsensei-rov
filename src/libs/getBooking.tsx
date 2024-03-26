@@ -1,4 +1,4 @@
-export default async function getUserProfile(token:string){
+export default async function getBooking(token:string){
 
   const response = await fetch("https://backend-hotel-booking.vercel.app/api/v1/bookings", {
       method: "GET",
@@ -7,7 +7,7 @@ export default async function getUserProfile(token:string){
       },
   })
   if(!response.ok){
-      throw new Error("Failed to fetch user profile")
+      throw new Error("Failed to fetch get booking")
   }
 
   return await response.json()
