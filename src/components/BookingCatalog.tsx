@@ -7,7 +7,6 @@ export default async function BookingCatalog({ BookingJson }: { BookingJson: Boo
     const bookingJsonReady = await BookingJson;
     
     
-
     return (
         <div style={{
             margin: "20px",
@@ -18,13 +17,14 @@ export default async function BookingCatalog({ BookingJson }: { BookingJson: Boo
             flexWrap: "wrap"
         }}>
             {bookingJsonReady.data.map((bookingItem: any) => (
+               
 
                 <BookingCard
                     bookingBegins={bookingItem.bookingBegin}
                     bookingEnds={bookingItem.bookingEnd}
                     roomTypes={bookingItem.roomType}
                     users={bookingItem.user} 
-                    hotels="65e2ec5f9fdb24c50e8eb620"
+                    hotels={bookingItem.hotel.name}
                     id={bookingItem.id}
                 />
             ))}
