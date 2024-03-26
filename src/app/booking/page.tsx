@@ -5,6 +5,7 @@ import { BookingItem } from "../../../interface";
 import { useState } from "react";
 import getHos from "./post";
 import { getServerSession } from "next-auth";
+import { Button } from "@mui/material";
 export default function booking() {
 
     const [bookingBegin, setbookingBegin] = useState<Dayjs | null>(null)
@@ -40,22 +41,26 @@ export default function booking() {
 
 
     return (
-        <main className="w-[100%] flex flex-col items-center space-y-4 mt-16">
-            <div className="text-xl font-medium">New Reservation</div>
-            <div className="w-fit space-y-2">
-                Make A Reservation
+        <div className="flex flex-col items-center justify-center h-screen bg-gray-100">
+            <div className="bg-white p-5 rounded-lg shadow-lg">
+                <h1 className="text-2xl font-bold text-center my-5">Booking</h1>
                 <DateReserve
-                    date_begin={(value: Dayjs) => { setbookingBegin(value) }}
-                    date_end={(value: Dayjs) => { setbookingEnd(value) }}
-                    nam={(value: string) => { setName(value) }}
-                    sur={(value: string) => { setSurname(value) }}
-                    id={(value: string) => { setId(value) }}
-                    hos={(value: string) => { setHospital(value) }}
-                    room={(value: string) => { setRoomtype(value) }}
+                    date_begin={setbookingBegin}
+                    date_end={setbookingEnd}
+                    nam={setName}
+                    sur={setSurname}
+                    id={setId}
+                    hos={setHospital}
+                    room={setRoomtype}
                 />
+                <Button
+                    onClick={makeBooking}
+                    className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4 text-center w-full"
+                    href='/'
+                >
+                    Book
+                </Button>
             </div>
-            <button className="block rounded-md bg-sky-600 hover:bg-indigo-600 px-3 py-2
-            shadow-sm text-white" name="Book Vaccine" onClick={makeBooking}> Make Reservation</button>
-        </main>
+        </div>
     );
 }

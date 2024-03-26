@@ -2,7 +2,7 @@
 import { DatePicker } from '@mui/x-date-pickers'
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider'
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs'
-import { Select, MenuItem, TextField } from '@mui/material'
+import { Select, MenuItem, TextField, Button } from '@mui/material'
 import BookingUpdate from '../../components/BookingUpdate'
 import { useState } from "react"
 import dayjs, { Dayjs } from 'dayjs'
@@ -76,7 +76,7 @@ export default function EditInput({ bookingID }: { bookingID: string }) {
                         <MenuItem value="65e6c94e023fc52fe87a6ee4">Kimsensei2</MenuItem>
                         <MenuItem value="65e2ec5f9fdb24c50e8eb620">Kimsensei3</MenuItem>
                     </Select>
-                    <button className="bg-sky-600 text-white px-3 py-1 rounded-md" onClick={update}>Update</button>
+                    <Button className="bg-sky-600 text-white px-3 py-1 rounded-md" onClick={update} href="/">Update</Button>
                 </div>
             </div>
         </div>

@@ -4,6 +4,7 @@ import fordelete from './fordelete';
 import EditInput from '../app/Edit/EditInput';
 import Link from 'next/link';
 import { Button } from '@mui/material';
+import { useRouter } from 'next/router';
 
 interface BookingCardProps {
     bookingBegins: Date;
@@ -16,8 +17,16 @@ interface BookingCardProps {
 
 export default function BookingCard({ bookingBegins, bookingEnds, roomTypes, users, hotels, id }: BookingCardProps) {
 
+    const refreshPage = () => {
+        window.location.reload();
+    }
+    let timeout;
 
-
+    function waitRefresh() {
+        timeout = setTimeout(refreshPage, 1000);
+    }
+      
+      
 
     return (
         <div className="bg-slate-200 rounded px-5 mx-5 py-2 my-2" >
@@ -29,7 +38,7 @@ export default function BookingCard({ bookingBegins, bookingEnds, roomTypes, use
             <div className="text-xl">roomType: {roomTypes}</div>
             <div className='flex flex-row items-center my-2'>
                 <Button className="block rounded-md bg-sky-600 hover:bg-indigo-600 px-3 py-1 mx-2
-                    text-white shadow-sm" onClick={() => fordelete(id)}>
+                    text-white shadow-sm" onClick={() => {fordelete(id); waitRefresh()}}>
                     Remove from List
                 </Button> 
                 <Button className="block rounded-md bg-sky-600 hover:bg-indigo-600 px-3 py-1 mx-2
