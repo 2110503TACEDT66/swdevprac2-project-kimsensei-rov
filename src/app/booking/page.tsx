@@ -19,7 +19,7 @@ export default function booking() {
     const makeBooking = () => {
         // find _id of hospitals by hospital name
         console.log(bookingBegin, bookingEnd, roomtype, hospital, name)
-        if (bookingBegin && bookingEnd && roomtype && hospital && name && id) {
+        if (bookingBegin && bookingEnd && roomtype && hospital && name) {
             const item: BookingItem = {
                 bookingBegin: dayjs(bookingBegin).toDate(),
                 bookingEnd: dayjs(bookingEnd).toDate(),
