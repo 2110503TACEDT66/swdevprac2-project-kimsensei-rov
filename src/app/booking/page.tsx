@@ -5,8 +5,6 @@ import { BookingItem } from "../../../interface";
 import { useState } from "react";
 import getHos from "./post";
 import { getServerSession } from "next-auth";
-import { HotelItem } from "../../../interface";
-
 export default function booking() {
 
     const [bookingBegin, setbookingBegin] = useState<Dayjs | null>(null)
@@ -19,9 +17,6 @@ export default function booking() {
     
 
     const makeBooking = () => {
-        const a: HotelItem[] = [
-            { name: "asd", telephone: "asdsads" }
-          ];
         // find _id of hospitals by hospital name
         console.log(bookingBegin, bookingEnd, roomtype, hospital, name)
         if (bookingBegin && bookingEnd && roomtype && hospital && name) {
@@ -30,7 +25,7 @@ export default function booking() {
                 bookingEnd: dayjs(bookingEnd).toDate(),
                 roomType: roomtype,
                 user: "65e56e595d19af11f393293e",
-                hotel:  a
+                hotel: hospital 
             };
             getHos({ item })
         } else {

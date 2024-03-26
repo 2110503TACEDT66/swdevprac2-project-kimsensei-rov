@@ -25,13 +25,14 @@ export interface HospitalItem {
     bookingEnd: Date,
     roomType: string,
     user: string,
-    hotel: HotelItem[]
+    hotel: string
   }
 
-    export interface HotelItem {
-      name: string,
-      telephone: string
-    }
+    // export interface HotelItem {
+    //   name: string,
+    //   telephone: string,
+    //   id:string
+    // }
 
   export interface BookingJson {
     success: boolean,
