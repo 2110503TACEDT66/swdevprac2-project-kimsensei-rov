@@ -11,7 +11,7 @@ export default async function postBooking(bookingData: BookingItem, token: strin
         body: JSON.stringify(bookingData),
     })
     if (!response.ok) {
-        console.log(response);
+        //console.log(response);
         throw new Error("Failed to post booking")
     }
 

@@ -22,7 +22,7 @@ export default function Register() {
                 "role": "user",
                 "telephone": telephone
             });
-            console.log(user);
+            //console.log(user);
         } catch (error) {
             console.log(error);
         }

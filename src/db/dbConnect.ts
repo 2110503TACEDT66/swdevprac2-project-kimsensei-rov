@@ -15,7 +15,7 @@ export const dbConnect = async () => {
     try {
         await mongoose.connect(MONGODB_URI, {bufferCommands: false});
         isConnected = true;
-        console.log("Connected to MongoDB")
+        //console.log("Connected to MongoDB")
         
     } catch (error) {
         console.log(error)
