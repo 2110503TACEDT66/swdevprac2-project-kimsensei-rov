@@ -50,10 +50,10 @@ export default function DateReserve({ date_begin, date_end, nam, sur, id, hos, r
             />
             {/* Select field for hospital */}
             <FormControl>
-            <InputLabel id='hospital'>Hospital</InputLabel>
+            <InputLabel id='hospital'>Hotel</InputLabel>
             <Select
                 labelId='hospital'
-                label="Hospital"
+                label="Hotel"
                 value={hospitId}
                 onChange={(e) => { setHospitalId(e.target.value); hos(e.target.value) }}
             >
